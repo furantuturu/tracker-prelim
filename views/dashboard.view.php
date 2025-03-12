@@ -1,9 +1,8 @@
 <?php require 'partials/header.partial.php' ?>
 <?php require 'partials/sidenav.partial.php' ?>
 
-<main class="dashboard-main">
-    <h1>Hello World</h1>
-</main>
+<h1>Hello Dashboard 🎉</h1>
+
 <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 <script>
     const jsConfetti = new JSConfetti()
