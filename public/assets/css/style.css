@@ -1,0 +1,64 @@
+.sidebar-nav {
+    position: fixed;
+    padding: 1rem;
+    height: 100dvh;
+    width: 12rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    /* background-color: #222; */
+    overflow-x: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    h1 {
+        text-align: center;
+    }
+
+}
+
+.tracker-main {
+    margin-left: 11rem;
+    padding-inline: 3rem;
+}
+
+.communication-container {
+
+    .communication-actions {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 1.5rem;
+        margin-block: 3rem;
+    
+        form {
+            width: unset;
+            margin-bottom: unset;
+        }
+    }
+}
+
+.report-container {
+
+    .report-actions {
+        margin-block: 3rem;
+
+        input, select, button {
+            margin-bottom: unset;
+        }
+    }
+
+}
+
+.file-attach-container {
+    margin-left: 0;
+    margin-block: 1.7rem;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+
+    & > a {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+}
+
