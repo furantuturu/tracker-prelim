@@ -10,7 +10,7 @@ class Database {
     private $statement;
     public function __construct(array $dsnData, string $username = 'root', string $password = '') {
         try {
-            $dsn = 'mysql:' + http_build_query($dsnData, '', ';');
+            $dsn = 'mysql:' . http_build_query($dsnData, '', ';');
 
             $this->connection = new PDO($dsn, $username, $password, [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -25,5 +25,8 @@ class Database {
         $this->statement->execute($params);
 
         return $this;
+    }
+    public function getAll() {
+        return $this->statement->fetchAll();
     }
 }
