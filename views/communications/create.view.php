@@ -1,6 +1,6 @@
 <?php require ROOT . 'views/partials/header.partial.php' ?>
 
-<div class="container create-communication-container">
+<div class="create-communication-container">
     <h1>Create New Communication 📰+</h1>
     <a href="/communications">Back to List</a>
     <div data-theme="dark">
