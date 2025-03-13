@@ -4,7 +4,7 @@
 <div class="communication-container">
     <h1>Communications List 📰</h1>
     <fieldset class="communication-actions">
-        <a href="/communications/create" role="button" tabindex="0">Add New</a>
+        <a href="/communications-create" role="button" tabindex="0">Add New</a>
         <form action="" method="post" role="search">
             <input type="search" name="search-communication" placeholder="Search by Barcode, Sender, or Subject">
             <input type="submit" value="Search">
