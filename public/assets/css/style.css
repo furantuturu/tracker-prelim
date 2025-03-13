@@ -1,3 +1,12 @@
+.hidden {
+    display: none;
+}
+
+[data-theme=dark] {
+    background-color: #1b202b;
+    box-shadow: 0 0 20px rgb(15, 18, 24);
+}
+
 .sidebar-nav {
     position: fixed;
     padding: 1rem;
@@ -38,6 +47,32 @@
     }
 }
 
+.create-communication-container {
+    max-width: 690px;
+    margin-inline: auto;
+    margin-top: 1.7rem;
+
+    h1 {
+        text-align: center;
+    }
+
+    &>a {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    &>div {
+        padding: 1.2rem;
+        border-radius: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .create-communication-container {
+        margin-inline: 2rem;
+    }
+}
+
 .report-container {
 
     .report-actions {
@@ -51,7 +86,8 @@
 }
 
 .file-attach-container {
-    margin-left: 0;
+    max-width: 900px;
+    margin-inline: auto;
     margin-block: 1.7rem;
     padding: 1.2rem;
     border-radius: 1.2rem;
@@ -59,6 +95,52 @@
     & > a {
         display: inline-block;
         margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .file-attach-container {
+        margin-inline: 2rem;
+    }
+}
+
+.upload-actions {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 0.8rem;
+        margin-right: .5rem;
+        border-radius: .4rem;
+    }
+
+    .upload-view-btn {
+        background-color: #4EB31B;
+
+        &:hover {
+            background-color: #62D926;
+        }
+    }
+
+    .upload-dwnl-btn {
+        background-color: #3C71F7;
+
+        &:hover {
+            background-color: #748BF8;
+        }
+    }
+
+    .upload-del-btn {
+        margin-bottom: unset;
+        background-color: #D93526;
+        border: none;
+
+        &:hover {
+            background-color: #F38F79;
+        }
     }
 }
 
