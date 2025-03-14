@@ -10,10 +10,10 @@
                 <input type="file" name="attachment" accept="application/pdf">
             </label>
             <?php if(isset($_SESSION['_flash']['filetypeerr']) || isset($_SESSION['_flash']['fileexists']) || isset($_SESSION['_flash']['fileerror'])): ?>
-                <div style="color: red;  margin-bottom: 1rem;"><?= $uploadErr ?></div>
+                <div style="color: red;  margin-bottom: 1rem;"><?= $fileErr ?></div>
             <?php endif ?>
             <?php if(isset($_SESSION['_flash']['filesuccess'])): ?>
-                <div style="color: lightgreen;  margin-bottom: 1rem;"><?= $uploadSucc ?></div>
+                <div style="color: lightgreen;  margin-bottom: 1rem;"><?= $fileSucc ?></div>
             <?php endif ?>
             <button type="submit" style="width: unset;">Upload PDF</button>
         </div>
