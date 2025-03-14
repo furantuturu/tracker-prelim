@@ -1,4 +1,5 @@
-vendor
+vendor/
 .env
 .vscode
-*.pdf
+communication-uploads/
+uploads/
