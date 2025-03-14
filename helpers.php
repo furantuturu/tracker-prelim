@@ -22,3 +22,23 @@ function getDatabaseClass() {
 
     return new Classes\Database($dsnData, $_ENV['USERNAME'], $_ENV['PASSWORD']);
 }
+
+function sanitize(mixed $data) {
+    return htmlspecialchars(trim($data));
+}
+
+function isEmpty(...$datas) {
+    foreach($datas as $data ) {
+        if (empty($data)) {
+            return true;
+        }
+        continue;
+    }
+    return false;
+}
+
+function makeDirectory(string $targetDir) {
+    if (!file_exists($targetDir) && !is_dir($targetDir)) {
+        mkdir($targetDir);
+    }
+}
