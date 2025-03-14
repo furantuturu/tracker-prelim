@@ -29,4 +29,8 @@ class Database {
     public function getAll() {
         return $this->statement->fetchAll();
     }
+    
+    public function get() {
+        return $this->statement->fetch();
+    }
 }
