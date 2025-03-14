@@ -45,6 +45,61 @@
             margin-bottom: unset;
         }
     }
+
+    .striped {
+        text-wrap: nowrap;
+        a, button {
+            padding: .5rem;
+            text-decoration: none;
+            color: white;
+            margin-bottom: unset;
+            border: none;
+            border-radius: .4rem;
+        }
+
+        .com-actions {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .com-view-btn {
+            background-color: #4EB31B;
+    
+            &:hover {
+                background-color: #62D926;
+            }
+        }
+
+        .com-edit-btn {
+            background-color: #D9C800;
+
+            &:hover {
+                background-color: #F2DF0D;
+            }
+        }
+
+        .com-del-btn {
+            background-color: #D93526;
+
+            &:hover {
+                background-color: #F38F79;
+            }
+        }
+    }
+
+    .pagination {
+        margin-block-start: 2rem;
+        text-align: center;
+
+        a {
+            border: 1px solid #3C71F7;
+            padding: .5rem .7rem;
+            border-radius: .5rem;
+            text-decoration: none;
+        }
+    }
 }
 
 .create-communication-container {
