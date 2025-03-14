@@ -4,7 +4,10 @@
     <h1>Create New Communication 📰+</h1>
     <a href="/communications">Back to List</a>
     <div data-theme="dark">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="/communications-create" method="post" enctype="multipart/form-data">
+            <?php if (isset($_SESSION['_flash']['emptyfielderror'])): ?>
+                <div style="color: red;  margin-bottom: 1rem;"><?= $emptyField ?></div>
+            <?php endif ?>
             <div>
                 <label>
                     Subject
@@ -67,11 +70,14 @@
                     <input type="date" name="date-target" aria-label="Date" required>
                 </label>
             </div>
-            <div>
+            <div id="days-overdue">
                 <label>
                     Days Overdue
-                    <input type="number" name="days-overdue" aria-label="Number" required>
+                    <input type="number" name="days-overdue" value="1" min="1" aria-label="Number" required>
                 </label>
+                <?php if (isset($_SESSION['_flash']['dayerror'])): ?>
+                    <div style="color: red;  margin-bottom: 1rem;"><?= $dayErr ?></div>
+                <?php endif ?>
             </div>
             <div>
                 <label>
@@ -79,11 +85,17 @@
                     <input type="date" name="date-received" aria-label="Date" required>
                 </label>
             </div>
-            <div>
+            <div id="attachment">
                 <label>
                     Attachment (PDF)
                     <input type="file" name="attachment" accept="application/pdf">
                 </label>
+                <?php if (isset($_SESSION['_flash']['uploaderror'])): ?>
+                    <div style="color: red;  margin-bottom: 1rem;"><?= $uploadErr ?></div>
+                <?php endif ?>
+                <?php if (isset($_SESSION['_flash']['filetypeerr']) || isset($_SESSION['_flash']['fileexists']) || isset($_SESSION['_flash']['fileerror'])): ?>
+                    <div style="color: red;  margin-bottom: 1rem;"><?= $fileErr ?></div>
+                <?php endif ?>
             </div>
             <input type="submit" class="outline">
         </form>
