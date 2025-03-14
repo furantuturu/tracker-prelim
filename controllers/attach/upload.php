@@ -8,6 +8,8 @@ $targetPdfFile = basename($_FILES['attachment']['name']);
 $uploadDir = $targetDir . $targetPdfFile;
 $pdfFileType = strtolower(pathinfo($targetPdfFile, PATHINFO_EXTENSION));
 
+makeDirectory($targetDir);
+
 if (ValidateFile::validate($pdfFileType, $uploadDir)) {
     redirect('/attach');
 }
