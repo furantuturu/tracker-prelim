@@ -7,6 +7,26 @@
     box-shadow: 0 0 20px rgb(15, 18, 24);
 }
 
+.login-screen {
+    height: 100dvh;
+    background-image: url('../imgs/programming.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login-form {
+        background-color: #1b202b;
+        padding: 1.5rem;
+        border-radius: 1.2rem;
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
 .sidebar-nav {
     position: fixed;
     padding: 1rem;
