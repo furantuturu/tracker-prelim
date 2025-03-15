@@ -10,7 +10,7 @@
             <input type="submit" value="Search">
         </form>
     </fieldset>
-    <small>*If you search by barcode, search it by its number.</small>
+    <small>*If you search by barcode, search it by its number. Search with empty value to retrieve all data again.</small>
     <div class="overflow-auto">
         <table class="striped">
             <thead>
@@ -67,8 +67,8 @@
     </div>
     <?php if ($pageLen >= 1): ?>
         <div class="pagination">
-            <?php for ($i=0; $i <= $pageLen; $i++): ?>
-                <a href="/communications?p=<?= $i + 1; ?>"><?= $i + 1; ?></a>
+            <?php for ($i=0; $i < $pageLen; $i++): ?>
+                <a href="/communications?p=<?= $i + 1; ?>&q=<?= $query ?>"><?= $i + 1; ?></a>
             <?php endfor; ?>
         </div>
     <?php endif; ?>
