@@ -10,4 +10,4 @@
 </head>
 
 <body>
-    <main class="<?= $hasTrackerClass ?>">
+    <main class="<?= $hasTrackerClass ?>" style="padding-block: unset;">
