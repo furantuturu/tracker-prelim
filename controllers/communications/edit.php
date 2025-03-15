@@ -13,7 +13,6 @@ $currCommunication = $db->query("SELECT * FROM communications WHERE communicatio
     ':id' => $id
 ])->get();
 
-$fileErr = "";
 if (Session::get('fileexists')) {
     $fileErr = Session::get('fileexists'); 
 } else if (Session::get('filetypeerr')) {
@@ -28,7 +27,7 @@ return view('communications/edit.view.php', [
     "emptyField" => Session::get("emptyfielderror"),
     "dayErr" => Session::get("dayerror"),
     "uploadErr" => Session::get("uploaderror"),
-    "fileErr" => $fileErr,
+    "fileErr" => $fileErr ?? '',
     "currCom" => $currCommunication
 ]);
 
