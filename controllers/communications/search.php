@@ -2,4 +2,4 @@
 
 $searchVal = sanitize($_POST['search-communication']);
 
-redirect("/communications?q={$searchVal}");
+redirect("/communications?p=1&q={$searchVal}");
