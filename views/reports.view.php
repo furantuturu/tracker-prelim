@@ -15,6 +15,9 @@
             </select>
             <input type="date" name="date-doc" aria-label="Date" required>
             <button type="submit" class="contrast">Generate Report</button>
+            <?php if($filtered): ?>
+                <a href="/reports" role="button">Reset</a>
+            <?php endif; ?>
         </fieldset>
     </form>
     <div class="overflow-auto">
@@ -28,7 +31,17 @@
                     <th scope="col">Status</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                <?php foreach($reports as $report): ?>
+                    <tr>
+                        <th scope="row">GFA-<?= $report['communication_id'] ?></th>
+                        <td><?= $report['sender'] ?></td>
+                        <td><?= $report['subject'] ?></td>
+                        <td><?= $report['docdate'] ?></td>
+                        <td><?= $report['status'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
     </div>
     <button class="secondary" onclick="window.print()">Print</button>
